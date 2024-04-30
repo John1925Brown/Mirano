@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mirano</title>
+
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="/favicon/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+    <link rel="shortcut icon" href="/favicon/favicon.ico" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="msapplication-config" content="/browserconfig.xml" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <script type="module" src="index.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container header__container">
+        <form action="#" class="header__form">
+          <input
+            type="search"
+            class="header__input"
+            name="search"
+            placeholder="Букет из роз"
+          />
+          <button class="header__search-btn">
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M13.3333 4.16663C13.3333 4.78496 13.9442 5.70829 14.5625 6.48329C15.3575 7.48329 16.3075 8.35579 17.3967 9.02163C18.2133 9.52079 19.2033 9.99996 20 9.99996M20 9.99996C19.2033 9.99996 18.2125 10.4791 17.3967 10.9783C16.3075 11.645 15.3575 12.5175 14.5625 13.5158C13.9442 14.2916 13.3333 15.2166 13.3333 15.8333M20 9.99996H4.76837e-07"
+                stroke="white"
+              />
+            </svg>
+          </button>
+        </form>
+
+        <img
+          class="header__logo"
+          src="./public/svg/logo.svg"
+          alt="Логотип Mirano flower buetique"
+        />
+        <button class="header__cart--btn">0</button>
+      </div>
+    </header>
+    <main>
+      <section class="hero">
+        <div class="container">
+          <div class="hero__head-group">
+            <h1 class="hero__title">Авторские букеты</h1>
+            <p class="hero__subtitle">и подарки</p>
+          </div>
+
+          <figure class="hero__group--image">
+            <img
+              class="hero__image hero__image--left"
+              src="./public/img/hero-left.jpg"
+              alt="Букет цветов в банке"
+            />
+            <svg
+              class="hero__image hero__image--center"
+              role="img"
+              aria-label="Букет цветов в горшке"
+              width="509"
+              height="438"
+              viewBox="0 0 509 438"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+            >
+              <clippath id="hero">
+                <path
+                  d="M508.425 83.6745C508.425 102.936 488.678 120.678 455.491 134.82C488.678 157.954 508.425 186.975 508.425 218.483C508.425 250.283 488.31 279.55 454.566 302.788C488.31 316.994 508.425 334.886 508.425 354.325C508.425 400.538 394.756 438 254.539 438C114.321 438 0.6521 400.538 0.6521 354.325C0.6521 334.886 20.767 316.994 54.5114 302.788C20.767 279.55 0.6521 250.283 0.6521 218.483C0.6521 186.975 20.3996 157.954 53.5861 134.82C20.3996 120.678 0.6521 102.936 0.6521 83.6745C0.6521 37.4624 114.321 0 254.539 0C394.756 0 508.425 37.4624 508.425 83.6745Z"
+                />
+              </clippath>
+
+              <image
+                xlink:href="./public/img/hero.jpg"
+                width="100%"
+                height="100%"
+                clip-path="url(#hero)"
+              />
+            </svg>
+
+            <img
+              class="hero__image hero__image--right"
+              src="./public/img/hero-right.jpg"
+              alt="Букет цветов в горшке"
+            />
+          </figure>
+        </div>
+      </section>
+    </main>
+    <footer></footer>
+  </body>
+</html>
