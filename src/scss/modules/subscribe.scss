@@ -1,0 +1,53 @@
+@use "../variables" as *;
+
+.subsrcibe {
+  padding: 140px 0;
+}
+.container {
+}
+.subscribe {
+  &__title {
+    font-family: $second-family;
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 1.2;
+    text-transform: uppercase;
+    text-align: center;
+    color: $green;
+    margin-bottom: 40px;
+  }
+
+  &__form {
+    position: relative;
+    max-width: 524px;
+    height: 40px;
+    width: 100%;
+    margin: 0 auto;
+    &::placeholder {
+      color: rgba($dark, 0.3);
+    }
+  }
+
+  &__input {
+    border-radius: 32px;
+    padding: 8px 0px 8px 16px;
+    width: 100%;
+    height: 100%;
+
+    border: none;
+  }
+
+  &__btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: $light-orange;
+    border-radius: 32px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
