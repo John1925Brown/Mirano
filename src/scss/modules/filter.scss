@@ -1,32 +1,76 @@
 @use "../variables" as *;
 
 .filter {
-  &__group {
-    border: none;
+  &__container {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    height: 72px;
+    gap: 30px;
+  }
+  &__group {
+    display: flex;
+    border: none;
+    padding: 0;
+    margin: 0;
+    gap: 12px;
+
+    &--choices {
+      gap: 64px;
+    }
   }
 
   &__radio {
     appearance: none;
-    background-color: $white;
-    border-radius: 300px;
-    &:checked + .filter__label {
-      background: $light-orange;
-      color: $white;
-    }
+    position: absolute;
   }
 
   &__label {
+    background-color: $white;
+    padding: 16px;
+    padding-left: 60px;
+    border-radius: 300px;
+    background-position: center left 16px;
+    background-repeat: no-repeat;
+    background-size: 40px;
+    cursor: pointer;
+
+    &--flowers {
+      background-image: url("/public/img/flowers-filter.png");
+    }
+
+    &--toys {
+      background-image: url("/public/img/toy-filter.png");
+    }
+
+    &--postcards {
+      background-image: url("/public/img/postcard-filter.jpg");
+    }
+
+    &:hover {
+      background-color: $orange;
+    }
+  }
+
+  &__radio:focus-visible + &__label {
+    outline: 2px solid $orange;
+    outline-offset: 5px;
+  }
+
+  &__radio:checked + &__label {
+    background-color: $light-orange;
+    color: $white;
+  }
+
+  &__select {
     display: flex;
     align-items: center;
-    padding: 16px;
-    border-radius: 300px;
-    text-align: center;
-
-    &--img {
-      display: inline-block;
+    gap: 8px;
+    &::after {
+      content: "";
+      width: 8px;
+      height: 8px;
+      background: url("/public/svg/arrow-fliter.svg") no-repeat
+        center/contain;
     }
   }
 }

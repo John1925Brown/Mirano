@@ -1,0 +1,51 @@
+@use "../variables" as *;
+
+.footer {
+  background: $footer url("/public/svg/figure-footer.svg") no-repeat 1644px;
+  padding: 80px 0;
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+  }
+
+  &__logo {
+    width: 200px;
+  }
+
+  &__address {
+    font-family: $font-family;
+    font-style: normal;
+  }
+
+  &__mail {
+    display: inline-block;
+    margin-bottom: 16px;
+  }
+
+  &__social {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    gap: 12px;
+    list-style: none;
+  }
+
+  &__link {
+  }
+
+  &__developers--list {
+  }
+
+  &__developers--item {
+    margin-bottom: 3px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__copyright {
+    text-transform: uppercase;
+  }
+}
