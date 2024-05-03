@@ -1,0 +1,32 @@
+@use "../variables" as *;
+
+.filter {
+  &__group {
+    border: none;
+    display: flex;
+    align-items: center;
+    height: 72px;
+  }
+
+  &__radio {
+    appearance: none;
+    background-color: $white;
+    border-radius: 300px;
+    &:checked + .filter__label {
+      background: $light-orange;
+      color: $white;
+    }
+  }
+
+  &__label {
+    display: flex;
+    align-items: center;
+    padding: 16px;
+    border-radius: 300px;
+    text-align: center;
+
+    &--img {
+      display: inline-block;
+    }
+  }
+}
