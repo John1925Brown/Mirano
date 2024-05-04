@@ -1,13 +1,21 @@
 @use "../variables" as *;
+@use "../media" as *;
 
 .footer {
-  background: $footer url("/public/svg/figure-footer.svg") no-repeat 1644px;
   padding: 80px 0;
+  background: $footer url("/public/svg/figure-footer.svg") no-repeat 1644px;
+  background-position: bottom;
+  background-size: 100%;
+
   &__container {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 60px;
+
+    @include tablet {
+      gap: 40px;
+    }
   }
 
   &__logo {
@@ -30,12 +38,6 @@
     align-content: center;
     gap: 12px;
     list-style: none;
-  }
-
-  &__link {
-  }
-
-  &__developers--list {
   }
 
   &__developers--item {

@@ -1,12 +1,14 @@
 @use "../variables" as *;
+@use "../media" as *;
 
-.subsrcibe {
+.subscribe {
   padding-top: 80px;
   padding-bottom: 140px;
-}
-.container {
-}
-.subscribe {
+
+  @include tablet {
+    padding-top: 60px 0 100px;
+  }
+
   &__title {
     font-family: $second-family;
     font-weight: 400;
@@ -16,6 +18,11 @@
     text-align: center;
     color: $green;
     margin-bottom: 40px;
+
+    @include tablet {
+      font-size: 32px;
+      margin-bottom: 24px;
+    }
   }
 
   &__form {
