@@ -27,6 +27,20 @@ const adjustElementPosition = (elem, count = 0) => {
 export const initChoices = () => {
   const choices = document.querySelectorAll(".choices");
 
+  const closeAllChoices = ({ target }) => {
+    let clickInside = target.closest(".choices");
+
+    if (!clickInside) {
+      choices.forEach((choice) => {
+        choice
+          .querySelector(".choices__box")
+          .classList.remove("choices__box--open");
+      });
+
+      document.removeEventListener("click", closeAllChoices);
+    }
+  };
+
   choices.forEach((choice) => {
     const choiseBtn = choice.querySelector(".choices__btn");
     const choiseBox = choice.querySelector(".choices__box");
@@ -41,6 +55,12 @@ export const initChoices = () => {
             .classList.remove("choices__box--open");
         }
       });
+
+      if (choiseBox.classList.contains("choices__box--open")) {
+        document.addEventListener("click", closeAllChoices);
+      } else {
+        document.removeEventListener("click", closeAllChoices);
+      }
 
       adjustElementPosition(choiseBox);
     });

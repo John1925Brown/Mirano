@@ -4,6 +4,11 @@
 .goods {
   padding: 60px 0;
 
+  &__box {
+    flex-grow: 1;
+    max-width: 970px;
+  }
+
   &__container {
     display: flex;
     justify-content: center;
@@ -34,7 +39,7 @@
   &__list {
     display: grid;
     grid-template-columns: repeat(auto-fit, 310px);
-    max-width: 970px;
+
     margin: 0 auto;
     justify-content: center;
     gap: 24px 20px;

@@ -10,14 +10,15 @@ export default function jsx(tag, attributes = {}, ...children) {
       elem.classList.add(...value.split(" "));
     } else if (key.startsWith("on") && key.toLowerCase() in window) {
       elem.addEventListenner(key.toLowerCase().substring(2), value);
-    } else if (key === 'style' && typeof value === "object") {
+    } else if (key === "style" && typeof value === "object") {
       Object.assign(elem.style, value);
     } else {
       elem.setAttribute(key, value);
-    } 
+    }
   });
 
   children.forEach((child) => {
+    console.log(child);
     if (typeof child === "string" || typeof child === "number") {
       elem.append(document.createTextNode(child.toString()));
     } else {

@@ -1,14 +1,19 @@
-import { fetchProducts } from "./API";
 import { ProductCard } from "./ProductCard";
+import { store } from "./Store";
 
 export const renderProducts = async () => {
   const goodsList = document.querySelector(".goods__list");
-  const products = await fetchProducts();
-  goodsList.innerHTML = "";
+  const updateList = () => {
+    const products = store.getProducts();
 
-  products.forEach((product) => {
-    const productCard = ProductCard(product);
-    goodsList.append(productCard);
-    console.log(product);
-  });
+    goodsList.innerHTML = "";
+
+    products.forEach((product) => {
+      const productCard = ProductCard(product);
+      goodsList.append(productCard);
+    });
+  };
+
+  store.subscribe(updateList);
+  updateList();
 };
