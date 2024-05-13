@@ -1,12 +1,11 @@
 export const ListType = (categories) => (
   <ul class="filter__type--list">
-    {categories.map((category) => {
-
+    {categories.map((category) => (
       <li class="filter__type--item">
         <button class="filter__type--btn" type="button">
-          Монобукеты
+          {category}
         </button>
-      </li>;
-    })}
+      </li>
+    ))}
   </ul>
 );
