@@ -1,10 +1,11 @@
 export const API_URL = "http://localhost:3000";
-import { store } from "./Store";
+import { productStore } from "./Store";
 
 const formatQueryString = (params) => {
   if (Object.keys(params).length === 0) {
     return "";
   }
+  
   const searchParams = new URLSearchParams();
   Object.entries(params).forEach(([key, value]) => {
     searchParams.append(key, value);
@@ -25,7 +26,7 @@ export const fetchProducts = async (params = {}) => {
 
     const products = await responce.json();
 
-    store.setProducts(products);
+    productStore.setProducts(products);
   } catch (error) {
     console.error(`error while receiving data: ${error}`);
     return [];
