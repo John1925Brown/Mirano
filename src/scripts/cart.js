@@ -4,6 +4,7 @@ import { cartStore } from "./Store";
 const headerCartBtn = document.querySelector(".header__cart--btn");
 const cartCloseBtn = document.querySelector(".cart__close");
 const cart = document.querySelector(".cart");
+const cartPriceTotal = document.querySelector(".cart__price--total");
 
 const toggleCart = () => {
   cart.classList.toggle("cart--open");
@@ -21,7 +22,15 @@ export const initCart = async () => {
   renderCart();
 
   cartStore.subscribe(() => {
-    headerCartBtn.textContent = cartStore.getCart().length;
+    const cart = cartStore.getCart();
+
+    headerCartBtn.textContent = cart.length;
+
+    const totalPriceValue = cart.reduce((acc, product) => {
+      return acc + product.price * product.quantity;
+    }, 0);
+
+    cartPriceTotal.innerHTML = `${totalPriceValue}&nbsp;₽`;
   });
 
   headerCartBtn.addEventListener("click", () => {
