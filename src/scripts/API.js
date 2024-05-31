@@ -1,4 +1,6 @@
-export const API_URL = "https://delightful-dear-magnolia.glitch.me";
+// export const API_URL = "https://delightful-dear-magnolia.glitch.me";
+export const API_URL = "https://mirano-api-jgxv.onrender.com";
+
 import { productStore } from "./Store";
 
 const formatQueryString = (params) => {
